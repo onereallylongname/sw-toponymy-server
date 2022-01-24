@@ -1,0 +1,16 @@
+
+server:
+  port : 8081
+  servlet:
+    context-path: /sw
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: true
+endpoints:
+  shutdown:
+    enabled: true

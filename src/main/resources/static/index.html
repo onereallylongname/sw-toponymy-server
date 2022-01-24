@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SW Search</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link rel="stylesheet" href="/sw/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/sw/img/logo/favicon.ico">
+</head>
+
+<body id="body">
+    <br> <!-- ToDo: remove br when style is added-->
+    <div id="panel">
+        <span>
+            <label for="mapLayerSelect">Choose layer:</label>
+            <select name="mapLayerSelect" id="mapLayerSelect">
+            </select>
+            <button id="mapContainsButton">Search</button>
+        </span>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>X</th>
+                <th>Y</th>
+                <th>Max Distance</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="nameContainInput" ></td>
+                <td><input type="text" id="xInput" ></td>
+                <td><input type="text" id="yInput" ></td>
+                <td><input type="text" id="maxDistInput" ></td>
+            </tr>
+        </table>
+    </div>
+    <br><br>  <!-- ToDo: remove br when style is added-->
+    <div id="map" style="width: 900px; height: 580px"></div>
+    <div>
+        <table id="locationsTable">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>X</th>
+                <th>Y</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Altitude</th>
+                <th>Page</th>
+            </tr>
+        </table>
+    </div>
+    <footer style="text-align:right">
+        <p>Author: António de Almeida</p>
+        <p>SW Toponymy Server *Powered by Springboot (for free usage)</p>
+        <button id="shutdownButton">Shutdown</button>
+      </footer>
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+      <script src="/sw/js/map.js"></script>
+      <script src="/sw/js/sw.js"></script>
+      <script src="/sw/js/main.js"></script>
+</body>
+
+</html>
